@@ -17,6 +17,10 @@
     "memory",
     "custom/power"
   ],
+  "hyprland/workspaces": {
+    "format": "[{id}]",
+    "on-click": "activate"
+  },
   "hyprland/window": {
     "max-length": 50
   },
@@ -29,35 +33,36 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "󰤨",
-      "deactivated": "󰤩"
+      "activated": "<span size='18000' rise='-2000'></span>",
+      "deactivated": "<span size='18000' rise='-2000'></span>"
     },
     "on-click-right": "hyprlock"
   },
   "pulseaudio": {
-    "format": " {volume}%",
+    "format": "<span size='18000' rise='-2000'></span> {volume}%",
+    // "format": " {volume}%",
     "format-muted": " Muted"
   },
   "network": {
-    "format-ethernet": "󰍛 {ifname} {ipaddr}",
-    "format-disconnected": "󰍛 Disconnected",
-    "format-error": "󰍛 Error"
+    "format-ethernet": "<span size='18000' rise='-2000'></span> {ifname} {ipaddr}",
+    "format-disconnected": "<span size='18000' rise='-2000'></span> Disconnected",
+    "format-error": "<span size='18000' rise='-2000'>󰍛</span> Error"
   },
   "temperature": {
     // "thermal-zone": 2,
     "thermal-zone": 1,
-    "format": "󰔏 {temperatureC}°C",
+    "format": "{temperatureC}°C",
     "max": 80,
     "critical": 90
   },
   "cpu": {
-    "format": " {usage}%"
+    "format": "CPU: {usage}%"
   },
   "memory": {
-    "format": "󰍛 {used} GiB"
+    "format": "RAM: {used} GiB"
   },
   "custom/power": {
-    "format": "",
+    "format": "<span size='18000' rise='-2000'></span>",
     "tooltip": "Power Menu",
     "on-click": "wlogout"
   }
